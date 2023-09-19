@@ -106,9 +106,197 @@ namespace HackerRank.Sample
             //Console.WriteLine(sonuc);
             #endregion
 
-            Console.ReadKey();
+            #region MyRegion
+            //List<int> grades = new List<int> { 73, 67, 38, 33 };
+            //List<int> roundedGrades = gradingStudents(grades);
 
+            //Console.WriteLine("Yuvarlanmış Notlar:");
+            //foreach (int grade in roundedGrades)
+            //{
+            //    Console.WriteLine(grade);
+            //} 
+            #endregion
+
+            #region ASCİİ Değ. Bulma
+            //char a = 'z';
+            //Console.WriteLine(Convert.ToByte(a).GetHashCode());
+            //Console.ReadKey();
+            #endregion
+
+            #region Muhammet Çözüm
+
+            //string kelime = Console.ReadLine().ToLower();
+
+            //if (string.IsNullOrWhiteSpace(kelime) || kelime.Length <= 1)
+            //{
+            //    Console.WriteLine("no answer");
+            //    return;
+            //}
+
+            //char[] kelimeHarfleri = new char[kelime.Length];
+            //int h = 0;
+
+            //foreach (var item in kelime)
+            //{
+            //    if (char.IsLetter(item))
+            //    {
+            //        kelimeHarfleri[h] = item;
+            //    }
+            //    h++;
+            //}
+
+            //bool cevap = true;
+            //cevap = Char.IsDigit(kelimeHarfleri[0]);
+
+            //char degisecekIlkHarf = ' ';
+            //int degisecekIlkHarfIndisi = 0;
+            //char degisecekIkinciHarf = ' ';
+            //int degisecekIkinciHarfIndisi = 0;
+
+            //for (int i = kelime.Length - 1; i > 0; i--)
+            //{
+            //    byte harfAscii = Convert.ToByte(kelimeHarfleri[i]);
+            //    byte harfAscii2 = Convert.ToByte(kelimeHarfleri[i - 1]);
+            //    if (harfAscii > harfAscii2)
+            //    {
+            //        degisecekIlkHarf = kelimeHarfleri[i];
+            //        degisecekIlkHarfIndisi = i;
+            //        degisecekIkinciHarf = kelimeHarfleri[i - 1];
+            //        degisecekIkinciHarfIndisi = i - 1;
+            //        break;
+            //    }
+            //}
+            //if (degisecekIlkHarfIndisi != 0)
+            //{
+            //    kelimeHarfleri[degisecekIkinciHarfIndisi] = degisecekIlkHarf;
+            //    kelimeHarfleri[degisecekIlkHarfIndisi] = degisecekIkinciHarf;
+            //    Console.WriteLine(kelimeHarfleri);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("no answer");
+            //} 
+            #endregion
+
+            #region Adil Abi Çözüm
+            //static string biggerIsGreater(string str)
+            //{
+            //    char[] word = str.ToCharArray();
+            //    if (word.Length == 1)
+            //    {
+            //        return "no answer";
+            //    }
+            //    int i = word.Length - 2;
+            //    while (i >= 0 && word[i] >= word[i + 1])
+            //    {
+            //        i--;
+            //    }
+            //    if (i < 0)
+            //    {
+            //        return "no answer";
+            //    }
+            //    int j = word.Length - 1;
+            //    while (j >= 0 && word[j] <= word[i])
+            //    {
+            //        j--;
+            //    }
+            //    (word[i], word[j]) = (word[j], word[i]);
+
+
+
+            //    Array.Sort(word, i + 1, word.Length - i - 1);
+
+
+
+            //    return new string(word);
+            //}
+            #endregion
+
+            string s = "abcc";
+            int[] adetDizisi= new int[s.Length];
+            bool valid = true;
+
+            for (int i = 1; i < s.Length; i++)
+            {
+               adetDizisi[i] = s.Count(a => a == s[i]);              
+            }
+
+            for (int j = 0; j < adetDizisi.Length; j++)
+            {
+                if (adetDizisi[0] != adetDizisi[j])
+                {
+                    valid = false;
+                    break;
+                }
+            }
+
+            string valid1 = "";
+            if (valid)
+            {
+                 valid1 = "YES";
+            }
+            else
+            {
+                 valid1 = "NO";
+            }
+            Console.Write(valid1);
+            Console.ReadKey();
         }
+
+        #region biggerIsGreater
+        //public static string biggerIsGreater(string w)
+        //{
+        //    char[] tekHarf = w.ToCharArray();
+        //    int[] asciiDeg = new int[tekHarf.Length];
+
+        //    for (int i = 0; i < tekHarf.Length; i++)
+        //    {
+        //        asciiDeg[i] = Convert.ToByte(tekHarf[i]).GetHashCode();
+
+        //        if (asciiDeg[i] == asciiDeg.Max())
+        //        {
+        //            asciiDeg[0] = asciiDeg[i];
+        //        }
+
+        //        if (asciiDeg[i] == asciiDeg.Min())
+        //        {
+        //            asciiDeg[asciiDeg.Length - 1] = asciiDeg[i];
+        //        }
+        //    }
+
+
+        //    return tekHarf.ToString(); 
+        #endregion
+
+        #region Sherlock and the Valid String
+        //public static string isValid(string s)
+        //{
+
+        //} 
+        #endregion
+
+        #region Grading Students
+        //public static List<int> gradingStudents(List<int> grades)
+        //{
+        //    for (int i = 0; i < grades.Count; i++)
+        //    {
+        //        if ((grades[i] + 2) % 5 == 0 && grades[i] >= 38)
+        //        {
+        //            grades[i] = grades[i] + 2;
+        //        }
+        //        else if ((grades[i] + 1) % 5 == 0 && grades[i] >= 38)
+        //        {
+        //            grades[i] = grades[i] + 1;
+        //        }
+        //        else if (grades[i] < 38)
+        //        {
+        //            grades[i] = grades[i];
+        //        }
+        //    }
+
+        //    return grades;
+        //} 
+        #endregion
 
         #region BirthDay Candles
         //public static int birthdayCakeCandles(List<int> candles)
