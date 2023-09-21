@@ -212,38 +212,116 @@ namespace HackerRank.Sample
             //}
             #endregion
 
-            string s = "abcc";
-            int[] adetDizisi= new int[s.Length];
-            bool valid = true;
+            #region MyRegion
+            //string s = "abcc";
+            //int[] adetDizisi = new int[s.Length];
+            //bool valid = true;
+            //string valid1 = "";
 
-            for (int i = 1; i < s.Length; i++)
-            {
-               adetDizisi[i] = s.Count(a => a == s[i]);              
-            }
+            //for (int i = 1; i < s.Length; i++)
+            //{
+            //    adetDizisi[i] = s.Count(a => a == s[i]);
+            //}
 
-            for (int j = 0; j < adetDizisi.Length; j++)
-            {
-                if (adetDizisi[0] != adetDizisi[j])
-                {
-                    valid = false;
-                    break;
-                }
-            }
+            //for (int j = 0; j < adetDizisi.Length; j++)
+            //{
+            //    if (adetDizisi[0] != adetDizisi[j])
+            //    {
+            //        valid = false;
+            //        break;
+            //    }
+            //}
 
-            string valid1 = "";
-            if (valid)
-            {
-                 valid1 = "YES";
-            }
-            else
-            {
-                 valid1 = "NO";
-            }
-            Console.Write(valid1);
+            //if (valid)
+            //{
+            //    valid1 = "YES";
+            //}
+            //else
+            //{
+            //    valid1 = "NO";
+            //}
+            //Console.Write(valid1); 
+            #endregion
+
+            string a = "nida";
+            string b = "servet";
+            int k = 0;
+            string sonuc=appendAndDelete(a, b, k);
+            Console.WriteLine(sonuc + k.ToString());
             Console.ReadKey();
         }
 
-        #region biggerIsGreater
+        #region MyRegion appendAndDelete
+        public static string appendAndDelete(string s, string t,int k)
+        {
+            int minLength = Math.Min(s.Length, t.Length);
+            int farkIndex = -1;
+            string c = "";
+            string d = "";
+            string result = "";
+
+            if (s.Length==t.Length)
+            {
+                k = s.Length + t.Length + 1;
+                result = "Yes";
+            }
+            else if(s.Length != t.Length)
+            {
+                for (int i = 0; i < minLength; i++)
+                {
+                    if (t.Length == i)
+                    {
+                        result = "No";
+                        break;
+                    }
+                    else if (s[i] != t[i])
+                    {
+                        farkIndex = i;
+                        c = s.Substring(0, i);
+                        d = t.Substring(i);
+                        k = i + d.Length-1;
+                        if (k < 3)
+                            result = "No";
+                        else
+                            result = "Yes";
+                        break;
+                    }                  
+                }             
+            }
+            return result;
+        } 
+        #endregion
+
+        #region Angry Professor
+
+        //public static string angryProfessor(int k, List<int> a)
+        //{
+        //    int sayac = 0;
+        //    string durum = "";
+
+        //    foreach (int i in a)
+        //    {
+        //        if (i<=0)
+        //        {
+        //            sayac++;
+        //        }
+        //    }
+
+        //    if (sayac>=k)
+        //    {
+        //        durum = "NO";
+        //    }
+        //    else
+        //    {
+        //        durum = "YES";
+        //    }
+
+        //    return durum;
+        //}
+
+        #endregion
+
+        #region biggerIsGreater-bakılacak
         //public static string biggerIsGreater(string w)
         //{
         //    char[] tekHarf = w.ToCharArray();
@@ -336,11 +414,11 @@ namespace HackerRank.Sample
 
         #endregion
 
-        #region StairCase
-        public static void staircase(int n)
-        {
+        #region StairCase - bakılacak
+        //public static void staircase(int n)
+        //{
 
-        }
+        //}
         #endregion
 
         #region Plus Minus
