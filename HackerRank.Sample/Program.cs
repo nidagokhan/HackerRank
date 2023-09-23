@@ -243,53 +243,80 @@ namespace HackerRank.Sample
             //Console.Write(valid1); 
             #endregion
 
-            string a = "nida";
-            string b = "servet";
-            int k = 0;
-            string sonuc=appendAndDelete(a, b, k);
-            Console.WriteLine(sonuc + k.ToString());
+            #region MyRegion
+            //string a = kangaroo(21, 6, 47, 3);
+            //Console.WriteLine(a); 
+            #endregion
+
             Console.ReadKey();
         }
 
-        #region MyRegion appendAndDelete
-        public static string appendAndDelete(string s, string t,int k)
-        {
-            int minLength = Math.Min(s.Length, t.Length);
-            int farkIndex = -1;
-            string c = "";
-            string d = "";
-            string result = "";
+        #region Number Line Jumps
 
-            if (s.Length==t.Length)
-            {
-                k = s.Length + t.Length + 1;
-                result = "Yes";
-            }
-            else if(s.Length != t.Length)
-            {
-                for (int i = 0; i < minLength; i++)
-                {
-                    if (t.Length == i)
-                    {
-                        result = "No";
-                        break;
-                    }
-                    else if (s[i] != t[i])
-                    {
-                        farkIndex = i;
-                        c = s.Substring(0, i);
-                        d = t.Substring(i);
-                        k = i + d.Length-1;
-                        if (k < 3)
-                            result = "No";
-                        else
-                            result = "Yes";
-                        break;
-                    }                  
-                }             
-            }
-            return result;
-        } 
+        //public static string kangaroo(int x1, int v1, int x2, int v2)
+        //{
+        //    string result = "";
+          
+        //    if (v1==v2)
+        //    {
+        //        result = "NO";
+        //    }
+        //    else
+        //    {
+        //        int a = (x1 - x2) / (v2 - v1);
+        //        if (((x1 - x2) % (v2 - v1)) != 0 || a <= 0)
+        //        {
+        //            result = "NO";
+        //        }
+        //        else
+        //        {
+        //            result = "YES";
+        //        }
+        //    }           
+        //return result;
+        //}
+
+        #endregion
+
+        #region appendAndDelete-bakılacak
+        //public static string appendAndDelete(string s, string t, int k)
+        //{
+        //    int minLength = Math.Min(s.Length, t.Length);
+        //    int farkIndex = -1;
+        //    string c = "";
+        //    string d = "";
+        //    string result = "";
+
+        //    if (s.Length == t.Length)
+        //    {
+        //        k = s.Length + t.Length + 1;
+        //        result = "Yes";
+        //    }
+        //    else if (s.Length != t.Length)
+        //    {
+        //        for (int i = 0; i < minLength; i++)
+        //        {
+        //            if (t.Length == i)
+        //            {
+        //                result = "No";
+        //                break;
+        //            }
+        //            else if (s[i] != t[i])
+        //            {
+        //                farkIndex = i;
+        //                c = s.Substring(0, i);
+        //                d = t.Substring(i);
+        //                k = i + d.Length - 1;
+        //                if (k < 3)
+        //                    result = "No";
+        //                else
+        //                    result = "Yes";
+        //                break;
+        //            }
+        //        }
+        //    }
+        //    return result;
+
         #endregion
 
         #region Angry Professor
@@ -554,4 +581,5 @@ namespace HackerRank.Sample
         #endregion
     }
 }
+
 
