@@ -248,15 +248,64 @@ namespace HackerRank.Sample
             //Console.WriteLine(a); 
             #endregion
 
+            #region MyRegion
+            //List<List<int>> arr = new List<List<int>>();
+            //List<int> innerList1 = new List<int> { -10, 3, 0, 5, -4 };
+            //List<int> innerList2 = new List<int> { 2, -1, 0, 2, -8 };
+            //List<int> innerList3 = new List<int> { 9, -2, -5, 6, 0 };
+            //List<int> innerList4 = new List<int> { 9, -7, 4, 8, -2 };
+            //List<int> innerList5 = new List<int> { 3, 7, 8, -5, 0 };
+
+            ////List<int> innerList1 = new List<int> { 11,2,4 };
+            ////List<int> innerList2 = new List<int> { 4,5,6 };
+            ////List<int> innerList3 = new List<int> { 10,8,-12};
+
+            //arr.Add(innerList1);
+            //arr.Add(innerList2);
+            //arr.Add(innerList3);
+            //arr.Add(innerList4);
+            //arr.Add(innerList5);
+
+            //int sonuc = diagonalDifference(arr);
+            //Console.WriteLine(sonuc); 
+            #endregion
+
+
+
             Console.ReadKey();
         }
+
+        #region Diagonal Difference
+        //public static int diagonalDifference(List<List<int>> arr)
+        //{
+        //    int toplam1 = 0;
+        //    int toplam2 = 0;
+        //    int result = 0;
+        //    for (int i = 0; i < arr.Count; i++)
+        //    {
+        //        for (int j = 0; j < arr.Count; j++)
+        //        {
+        //            if (i == j)
+        //            {
+        //                toplam1 += arr[i][j];
+        //            }
+        //            if (i+j ==arr.Count-1)
+        //            {
+        //                toplam2+= arr[i][j];
+        //            }
+        //            result=Math.Abs(toplam1-toplam2);
+        //        }
+        //    }
+        //    return result;
+        //}
+        #endregion
 
         #region Number Line Jumps
 
         //public static string kangaroo(int x1, int v1, int x2, int v2)
         //{
         //    string result = "";
-          
+
         //    if (v1==v2)
         //    {
         //        result = "NO";
