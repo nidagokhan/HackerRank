@@ -270,8 +270,8 @@ namespace HackerRank.Sample
             //Console.WriteLine(sonuc); 
             #endregion
 
-            List<int> list = new List<int> { 2, 4 };
-            List<int> list1 = new List<int> { 16, 32, 96 };
+            List<int> list = new List<int> { 2 };
+            List<int> list1 = new List<int> { 20, 30, 12 };
             int a = getTotalX(list, list1);
             Console.WriteLine(a);
 
@@ -283,31 +283,51 @@ namespace HackerRank.Sample
         {
             int kalan = 0;
             int sayac = 0;
+            int carpan = a[0] * a[1];
 
-            for (int i = 0; i < b.Count; i++)
+            if (a.Count == 1)
             {
-                kalan = b[i] % a[0];
-                kalan += kalan;
-            }
-            if (kalan == 0)
-            {
-                sayac++;
-
-                while (kalan==0)
+                for (int i = 0; i < b.Count; i++)
                 {
-                    for (int j = 0; j < b.Count; j++)
+                    kalan = b[i] % a[0];
+                    kalan += kalan;
+                }
+                if (kalan == 0)
+                {
+                    sayac++;
+                }
+            }
+            else
+            {
+                for (int i = 0; i < b.Count; i++)
+                {
+                    kalan = b[i] % a[0];
+                    kalan += kalan;
+                }
+                if (kalan == 0)
+                {
+                    sayac++;
+
+                    while (kalan == 0)
                     {
-                        kalan = b[j] % (a[0] * a[1]);
-                        kalan += kalan;
-                    }
-                    if (kalan == 0)
-                    {
-                        sayac++;
+                        for (int j = 0; j < b.Count; j++)
+                        {
+                            int d = b[j] % carpan;
+                            kalan = kalan + d;
+                        }
+                        if (kalan == 0)
+                        {
+                            sayac++;
+                            carpan *= a[0];
+                        }
+                        else
+                        {
+                            return sayac;
+                        }
                     }
                 }
-                
-                
             }
+
             return sayac;
         }
 
