@@ -270,10 +270,48 @@ namespace HackerRank.Sample
             //Console.WriteLine(sonuc); 
             #endregion
 
-
+            List<int> list = new List<int> { 2, 4 };
+            List<int> list1 = new List<int> { 16, 32, 96 };
+            int a = getTotalX(list, list1);
+            Console.WriteLine(a);
 
             Console.ReadKey();
         }
+
+        #region Between Two Sets
+        public static int getTotalX(List<int> a, List<int> b)
+        {
+            int kalan = 0;
+            int sayac = 0;
+
+            for (int i = 0; i < b.Count; i++)
+            {
+                kalan = b[i] % a[0];
+                kalan += kalan;
+            }
+            if (kalan == 0)
+            {
+                sayac++;
+
+                while (kalan==0)
+                {
+                    for (int j = 0; j < b.Count; j++)
+                    {
+                        kalan = b[j] % (a[0] * a[1]);
+                        kalan += kalan;
+                    }
+                    if (kalan == 0)
+                    {
+                        sayac++;
+                    }
+                }
+                
+                
+            }
+            return sayac;
+        }
+
+        #endregion
 
         #region Diagonal Difference
         //public static int diagonalDifference(List<List<int>> arr)
