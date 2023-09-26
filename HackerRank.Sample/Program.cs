@@ -270,66 +270,71 @@ namespace HackerRank.Sample
             //Console.WriteLine(sonuc); 
             #endregion
 
-            List<int> list = new List<int> { 2 };
-            List<int> list1 = new List<int> { 20, 30, 12 };
-            int a = getTotalX(list, list1);
-            Console.WriteLine(a);
+            #region MyRegion
+            //List<int> list = new List<int> { 1 };
+            //List<int> list1 = new List<int> { 100 };
+            //int a = getTotalX(list, list1);
+            //Console.WriteLine(a); 
+            #endregion
 
+            staircase(3);
             Console.ReadKey();
         }
 
-        #region Between Two Sets
-        public static int getTotalX(List<int> a, List<int> b)
-        {
-            int kalan = 0;
-            int sayac = 0;
-            int carpan = a[0] * a[1];
+        #region Between Two Sets-bakılacak
+        //public static int getTotalX(List<int> a, List<int> b)
+        //{
+        //    #region MyRegion
+        //    int kalan = 0;
+        //    int sayac = 0;
 
-            if (a.Count == 1)
-            {
-                for (int i = 0; i < b.Count; i++)
-                {
-                    kalan = b[i] % a[0];
-                    kalan += kalan;
-                }
-                if (kalan == 0)
-                {
-                    sayac++;
-                }
-            }
-            else
-            {
-                for (int i = 0; i < b.Count; i++)
-                {
-                    kalan = b[i] % a[0];
-                    kalan += kalan;
-                }
-                if (kalan == 0)
-                {
-                    sayac++;
+        //    if (a.Count == 1)
+        //    {
+        //        for (int i = 0; i < b.Count; i++)
+        //        {
+        //            kalan = b[i] % a[0];
+        //            kalan += kalan;
+        //        }
+        //        if (kalan == 0)
+        //        {
+        //            sayac++;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        int carpan = a[0] * a[1];
+        //        for (int i = 0; i < b.Count; i++)
+        //        {
+        //            kalan = b[i] % a[0];
+        //            kalan += kalan;
+        //        }
+        //        if (kalan == 0)
+        //        {
+        //            sayac++;
 
-                    while (kalan == 0)
-                    {
-                        for (int j = 0; j < b.Count; j++)
-                        {
-                            int d = b[j] % carpan;
-                            kalan = kalan + d;
-                        }
-                        if (kalan == 0)
-                        {
-                            sayac++;
-                            carpan *= a[0];
-                        }
-                        else
-                        {
-                            return sayac;
-                        }
-                    }
-                }
-            }
+        //            while (kalan == 0)
+        //            {
+        //                for (int j = 0; j < b.Count; j++)
+        //                {
+        //                    int d = b[j] % carpan;
+        //                    kalan = kalan + d;
+        //                }
+        //                if (kalan == 0)
+        //                {
+        //                    sayac++;
+        //                    carpan *= a[0];
+        //                }
+        //                else
+        //                {
+        //                    return sayac;
+        //                }
+        //            }
+        //        }
+        //    }
 
-            return sayac;
-        }
+        //    return sayac;
+        //    #endregion
+        //}
 
         #endregion
 
@@ -549,10 +554,20 @@ namespace HackerRank.Sample
         #endregion
 
         #region StairCase - bakılacak
-        //public static void staircase(int n)
-        //{
-
-        //}
+        public static void staircase(int n)
+        {
+            for (int i = n-1; i >= 0; i--)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    if (j>=i)
+                        Console.Write("#");
+                    else
+                        Console.Write(" ");
+                }
+                Console.WriteLine("");
+            }
+        }
         #endregion
 
         #region Plus Minus
