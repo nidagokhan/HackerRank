@@ -282,37 +282,72 @@ namespace HackerRank.Sample
             //string sonuc = catAndMouse(1, 2, 3);
             //Console.WriteLine(sonuc);
 
-            List<int> list = new List<int> { 52, 99 ,93 ,84 ,50, 64, 61 ,87 ,89, 97 ,64 ,6,9 ,61, 90, 82, 53, 50 ,63 ,82 ,87 ,76 ,78, 75, 55, 80, 68, 75, 83, 69, 81, 95, 89, 60, 59, 9,0, 100, 90, 64, 53, 60, 88, 93, 62, 50, 75, 7,7, 60, 93, 55, 79, 52, 47, 65, 74, 62, 60, 96, 49, 73, 92, 79, 54, 100, 81, 63, 58, 75, 80, 89, 94, 52, 85, 57, 72, 97, 81, 97, 66, 84, 7,7, 83, 94, 85, 68, 99, 54, 64, 83, 67, 84, 81, 65, 59, 89, 68, 91, 60, 79, 74, 57 };
-            int sonuc = hurdleRace(47, list);
-            Console.WriteLine(sonuc);
+            #region MyRegion
+            //List<int> list = new List<int> { 52, 99, 93, 84, 50, 64, 61, 87, 89, 97, 64, 6, 9, 61, 90, 82, 53, 50, 63, 82, 87, 76, 78, 75, 55, 80, 68, 75, 83, 69, 81, 95, 89, 60, 59, 9, 0, 100, 90, 64, 53, 60, 88, 93, 62, 50, 75, 7, 7, 60, 93, 55, 79, 52, 47, 65, 74, 62, 60, 96, 49, 73, 92, 79, 54, 100, 81, 63, 58, 75, 80, 89, 94, 52, 85, 57, 72, 97, 81, 97, 66, 84, 7, 7, 83, 94, 85, 68, 99, 54, 64, 83, 67, 84, 81, 65, 59, 89, 68, 91, 60, 79, 74, 57 };
+            //int sonuc = hurdleRace(47, list);
+            //Console.WriteLine(sonuc); 
+            #endregion
+
+            #region MyRegion
+            //List<int> array = new List<int>() { 1, 1, 3, 1, 2, 1, 3, 3, 3, 3 };
+            //int result = sockMerchant(array.Count, array);
+            //Console.WriteLine(result); 
+            #endregion
+
             Console.ReadKey();
         }
 
-        #region The Hurdle Race
-        public static int hurdleRace(int k, List<int> height)
-        {
-            int posion1 = 0;
-            foreach (int i in height)
-            {
-                if (height.Max()-k>0)
-                {
-                    posion1 = height.Max() - k;
-                }
-                else
-                {
-                    if (posion1 != 0)
-                    {
-                        posion1 = posion1;
-                    }
-                    else
-                    {
-                        posion1 = 0;
-                    }
-                }
-            }
+        #region Sales by Match
 
-            return posion1;
-        }
+        //public static int sockMerchant(int n, List<int> ar)
+        //{
+        //    var dict = new Dictionary<int, int>();
+        //    List<int> arrayLast = new List<int>();
+        //    int sonuc = 0;
+        //    foreach (var value in ar)
+        //    {
+        //        if (dict.ContainsKey(value))
+        //            dict[value]++;
+        //        else
+        //            dict[value] = 1;
+        //    }
+        //    foreach (var pair in dict)
+        //    {
+        //        if (pair.Value>=2)
+        //        {
+        //            sonuc += (pair.Value / 2);
+        //        }
+        //    }
+        //    return sonuc;
+        //}
+
+        #endregion
+
+        #region The Hurdle Race
+        //public static int hurdleRace(int k, List<int> height)
+        //{
+        //    int posion1 = 0;
+        //    foreach (int i in height)
+        //    {
+        //        if (height.Max()-k>0)
+        //        {
+        //            posion1 = height.Max() - k;
+        //        }
+        //        else
+        //        {
+        //            if (posion1 != 0)
+        //            {
+        //                posion1 = posion1;
+        //            }
+        //            else
+        //            {
+        //                posion1 = 0;
+        //            }
+        //        }
+        //    }
+
+        //    return posion1;
+        //}
 
         #endregion
 
