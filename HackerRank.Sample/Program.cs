@@ -294,35 +294,41 @@ namespace HackerRank.Sample
             //Console.WriteLine(result); 
             #endregion
 
-            string path = "DDUUUUDD";
-            int vadi = countingValleys(path.Length, path);
-            Console.WriteLine(vadi);
+            #region MyRegion
+            //string path = "DDUUUUDD";
+            //int vadi = countingValleys(path.Length, path);
+            //Console.WriteLine(vadi); 
+            #endregion
+
+
             Console.ReadKey();
         }
 
-        public static int countingValleys(int steps, string path)
-        {
-            int vadi = 0;
-            int toplam = 0;
+        #region countingValleys
+        //public static int countingValleys(int steps, string path)
+        //{
+        //    int vadi = 0;
+        //    int toplam = 0;
 
-            foreach(char i in path) 
-            {
-                if (i == 'D')
-                {
-                    toplam--;
-                }
-                else if (i =='U')
-                {
-                    toplam++;
+        //    foreach (char i in path)
+        //    {
+        //        if (i == 'D')
+        //        {
+        //            toplam--;
+        //        }
+        //        else if (i == 'U')
+        //        {
+        //            toplam++;
 
-                    if (toplam==0)
-                    {
-                        vadi++;
-                    }
-                }
-            }
-            return vadi;
-        }
+        //            if (toplam == 0)
+        //            {
+        //                vadi++;
+        //            }
+        //        }
+        //    }
+        //    return vadi;
+        //} 
+        #endregion
 
         #region Sales by Match
 
