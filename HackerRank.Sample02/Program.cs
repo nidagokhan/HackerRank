@@ -47,6 +47,21 @@ namespace HackerRank.Sample02
             //} 
             #endregion
 
+            #region Dictionary type
+            //Dictionary<string, string> dic = new Dictionary<string, string>();
+            //dic.Add("sam", "99912222");
+            //dic.Add("tom", "11122222");
+            //dic.Add("harry", "12299933");
+            //string key = Console.ReadLine();
+            //string value = dic[key];
+
+            //if (dic.ContainsKey(key))
+
+            //    Console.WriteLine($"{key}={value}");
+            //else
+            //    Console.WriteLine("Not Found"); 
+            #endregion
+
 
             Console.ReadKey();
         }
