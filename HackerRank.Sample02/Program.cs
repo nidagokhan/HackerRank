@@ -62,6 +62,28 @@ namespace HackerRank.Sample02
             //    Console.WriteLine("Not Found"); 
             #endregion
 
+            #region Electronics Shop
+            //int[] keyboards = new int[] { 3, 1 };
+            //int[] drives = new int[] { 5, 2, 8 };
+            //int budget = 10;
+            //int result = -1;
+
+            //for (int i = 0; i < keyboards.Length; i++)
+            //{
+            //    for (int j = 0; j < drives.Length; j++)
+            //    {
+            //        int totalCost = keyboards[i] + drives[j];
+            //        if (totalCost <= budget && totalCost > result)
+            //        {
+            //            result = totalCost;
+            //        }
+            //    }
+
+            //}
+            //Console.WriteLine(result); 
+            #endregion
+
+
 
             Console.ReadKey();
         }
