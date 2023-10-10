@@ -54,12 +54,35 @@ namespace HackerRank.Sample02
             //dic.Add("harry", "12299933");
             //string key = Console.ReadLine();
             //string value = dic[key];
+            //if (value !=null)
+            //{
+            //    Console.WriteLine($"{key}={value}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Not Found");
+            //}
 
             //if (dic.ContainsKey(key))
-
             //    Console.WriteLine($"{key}={value}");
             //else
-            //    Console.WriteLine("Not Found"); 
+            //    Console.WriteLine("Not Found");
+            #endregion
+
+            #region Fibonacci
+
+            //int sayi1 = 1;
+            //int sayi2 = 2;
+            //int sayi3 = 0;
+
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    sayi3 = sayi1 + sayi2;
+            //    Console.Write(sayi3 + " ");
+            //    sayi1 = sayi2;
+            //    sayi2 = sayi3;
+            //}
+
             #endregion
 
             #region Electronics Shop
@@ -83,9 +106,59 @@ namespace HackerRank.Sample02
             //Console.WriteLine(result); 
             #endregion
 
+            #region ?
+            //int[] dizi = new int[] { 4, 6, 5, 3, 3, 1 };
+            //List<int> fark = new List<int>();
+            //int result = 0;
 
+            //for (int i = 1; i < dizi.Length; i++)
+            //{
+            //    if (dizi[i - 1] - dizi[i]<=1)
+            //    {
+            //        fark.Add(dizi[i-1]);
+            //        fark.Add(dizi[i]);
+            //    }
+            //}
 
+            //foreach (int i in fark)
+            //{
+            //    Console.WriteLine(i);
+            //} 
+            #endregion
+
+            int sonuc = beautifulDays(13,45,3);
+            Console.WriteLine(sonuc);
             Console.ReadKey();
+        }
+
+        public static int beautifulDays(int i, int j, int k)
+        {
+            int start = i;
+            int finish = j;
+            int result = 0;
+            int count = 0;
+
+            for (int a = start; a <= finish; a++)
+            {
+                result = Math.Abs(a - Ters(a));
+                if (result % k == 0)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+        public static int Ters(int sayi)
+        {
+            int ters = 0;
+
+            while (sayi>0)
+            {
+                int basamak = sayi % 10;
+                ters = ters * 10 + basamak;
+                sayi = sayi / 10;
+            }
+            return ters;
         }
 
         //public static List<int> icecreamParlor(int m, List<int> arr)

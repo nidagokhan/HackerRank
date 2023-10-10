@@ -10,8 +10,8 @@ namespace HackerRank.Sample01
     {
         static void Main(string[] args)
         {
-            string a = "ivvkxq";
-            string b = "ivvkx";
+            string a = Console.ReadLine();
+            string b = Console.ReadLine();
 
             char[] ca=a.ToCharArray();
             char[] cb=b.ToCharArray();
