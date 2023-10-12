@@ -58,33 +58,88 @@ namespace HackerRank.Sample03
             #endregion
 
             #region Flipping The Matrix
-            List<List<int>> arr = new List<List<int>>();
-            List<int> list1 = new List<int>() { 112,42,83,119};
-            List<int> list2 = new List<int>() { 56,125,56,49};
-            List<int> list3 = new List<int>() { 15,78,101,43 };
-            List<int> list4 = new List<int>() { 62,98,114,108 };
+            //List<List<int>> arr = new List<List<int>>();
+            //List<int> list1 = new List<int>() { 112, 42, 83, 119 };
+            //List<int> list2 = new List<int>() { 56, 125, 56, 49 };
+            //List<int> list3 = new List<int>() { 15, 78, 101, 43 };
+            //List<int> list4 = new List<int>() { 62, 98, 114, 108 };
 
-            arr.Add(list1);
-            arr.Add(list2);
-            arr.Add(list3);
-            arr.Add(list4);
+            //arr.Add(list1);
+            //arr.Add(list2);
+            //arr.Add(list3);
+            //arr.Add(list4);
 
-            int toplam = 0;
+            //int toplam = 0;
 
-            for (int i = 0; i < arr.Count; i++)
-            {
-                if (arr[0][0] < arr[arr.Count][0])
-                {
-                    //kolonu ters çevir
-                }
-                if (arr[0][0] < arr[0][arr.Count])
-                {
-                    //satırı ters çevir
-                }
-            }
+            //for (int i = 0; i < arr.Count; i++)
+            //{
+            //    if (arr[0][0] < arr[arr.Count][0])
+            //    {
+            //        kolonu ters çevir
+            //    }
+            //    if (arr[0][0] < arr[0][arr.Count])
+            //    {
+            //        satırı ters çevir
+            //    }
+            //}
 
 
             #endregion
+
+            #region Caesar Cipher
+            //int k = 87;
+            //string s = "www.abc.xy";
+            //string alfabe = "abcdefghijklmnopqrstuvwxyz";
+            //string araDegisken1=" ", araDegisken2=" ";
+
+            //if (k<=26)
+            //{
+            //     araDegisken1 = alfabe.Substring(0, k);
+            //     araDegisken2 = alfabe.Substring(k, alfabe.Length - k);
+            //}
+            //else if (k>26)
+            //{
+            //    k = k % 26;
+            //     araDegisken1 = alfabe.Substring(0, k);
+            //     araDegisken2 = alfabe.Substring(k, alfabe.Length - k);
+            //}
+
+            //string degistirilenAlfabe = araDegisken2 + araDegisken1;
+
+            //char[] result = new char[s.Length];
+
+            //Dictionary<string, string> map = new Dictionary<string, string>();
+
+            //for (int i = 0; i < alfabe.Length; i++)
+            //{
+            //    map[alfabe[i].ToString()] = degistirilenAlfabe[i].ToString();
+            //    map[alfabe[i].ToString().ToUpper()] = degistirilenAlfabe[i].ToString().ToUpper();
+            //}
+
+            //for (int i = 0; i < s.Length; i++)
+            //{
+            //    if (map.ContainsKey(s[i].ToString()))
+            //    {
+            //        string item = s[i].ToString();
+            //        result[i] = Convert.ToChar(map[item]);
+            //    }
+            //    else
+            //    {
+            //        result[i] = s[i];
+            //    }
+            //}
+
+            //string a = new string(result);
+            //Console.WriteLine(a);
+
+            #endregion
+
+            #region Tower Breakers
+
+
+
+            #endregion
+
             Console.ReadKey();
         }
     }

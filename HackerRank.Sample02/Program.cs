@@ -48,26 +48,33 @@ namespace HackerRank.Sample02
             #endregion
 
             #region Dictionary type
-            //Dictionary<string, string> dic = new Dictionary<string, string>();
-            //dic.Add("sam", "99912222");
-            //dic.Add("tom", "11122222");
-            //dic.Add("harry", "12299933");
-            //string key = Console.ReadLine();
-            //string value = dic[key];
-            //if (value !=null)
-            //{
-            //    Console.WriteLine($"{key}={value}");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Not Found");
-            //}
+            Dictionary<string, string> dic = new Dictionary<string, string>();
+            dic.Add("sam", "99912222");
+            dic.Add("tom", "11122222");
+            dic.Add("harry", "12299933");
+            string value = "";
 
-            //if (dic.ContainsKey(key))
-            //    Console.WriteLine($"{key}={value}");
-            //else
-            //    Console.WriteLine("Not Found");
+
+            try
+            {
+                foreach (KeyValuePair<string, string> kvp in dic)
+                {
+                    string key = kvp.Key;
+                    value = dic[key];
+                    if (value != null)
+                    {
+                        Console.WriteLine($"{key}={value}");
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Not Found");
+            }
+
+
             #endregion
+            Console.ReadKey();
 
             #region Fibonacci
 
@@ -131,40 +138,40 @@ namespace HackerRank.Sample02
             //Console.WriteLine(sonuc); 
             #endregion
 
-            List<int> list = new List<int>() { 19, 10, 12, 10, 24, 25, 22 };
-            int k = 4;
-            int toplam = 0;
-            int result = 0;
-            List<int> son = new List<int>();
+            //List<int> list = new List<int>() { 19, 10, 12, 10, 24, 25, 22 };
+            //int k = 4;
+            //int toplam = 0;
+            //int result = 0;
+            //List<int> son = new List<int>();
 
-            #region 1.yol
-            //for (int i = 1; i < list.Count; i++)
+            //#region 1.yol
+            ////for (int i = 1; i < list.Count; i++)
+            ////{
+            ////    toplam= list[0] + list[i];
+            ////    if (toplam % k!=0)
+            ////    {
+            ////        son.Add(list[i]);
+            ////        son.Add(list[0]);
+            ////    }
+            ////} 
+            //#endregion
+
+            //for (int i = 0; i < list.Count; i++)
             //{
-            //    toplam= list[0] + list[i];
-            //    if (toplam % k!=0)
+            //    for (int j = 0; j < list.Count; j++)
             //    {
-            //        son.Add(list[i]);
-            //        son.Add(list[0]);
+            //        toplam = list[i] + list[j];
+            //        if (toplam % k != 0)
+            //        {
+            //            son.Add(list[i]);
+            //            son.Add(list[j]);
+            //        }
             //    }
-            //} 
-            #endregion
-
-            for (int i = 0; i < list.Count; i++)
-            {
-                for (int j = 0; j < list.Count; j++)
-                {
-                    toplam = list[i] + list[j];
-                    if (toplam % k != 0)
-                    {
-                        son.Add(list[i]);
-                        son.Add(list[j]);
-                    }
-                }
-            }
-            son = son.Distinct().ToList();
-            result = son.Count();
-            Console.WriteLine(result);
-            Console.ReadKey();
+            //}
+            //son = son.Distinct().ToList();
+            //result = son.Count();
+            //Console.WriteLine(result);
+            //Console.ReadKey();
         }
 
         #region beautifulDays
@@ -212,7 +219,7 @@ namespace HackerRank.Sample02
             {
                 c += Math.Max(arr[i], arr[k - i]);
             }
-            if (arr[0] > 1) 
+            if (arr[0] > 1)
                 c++;
             if (k % 2 == 0 && arr[k / 2] > 0)
             {
